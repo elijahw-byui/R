@@ -1,0 +1,77 @@
+---
+title: "R_Module_O"
+author: "Elijah"
+date: "2/7/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+
+foc <- "https://query1.finance.yahoo.com/v7/finance/download/AAPL?period1=1486512000&period2=1644278400&interval=1d&events=history&includeAdjustedClose=true"
+
+
+O <- readr::read_csv(foc)
+
+O$Added_Column <- 0
+O$Added_Column2 <- 0
+plot(O$Date, O$Close)
+```
+
+
+
+```{r, include=TRUE}
+p =1
+len <- length(O[[5]])
+for (p in 50:len)
+{
+if (p > 50)
+{
+  z <- p-50
+  j <- 0
+  d <- 1
+  ##print(p)
+  for (d in z:p)
+  {
+  j <- j + O$Close[d]
+  
+    }
+    O$Added_Column[d] <- j/50
+    }
+}
+plot(O$Date, O$Added_Column)
+
+```
+
+
+
+```{r}
+p =1
+len <- length(O[[5]])
+for (p in 200:len)
+{
+if (p > 200)
+{
+  z <- p-200
+  j <- 0
+  d <- 1
+  ##print(p)
+  for (d in z:p)
+  {
+  j <- j + O$Close[d]
+  
+    }
+    O$Added_Column2[d] <- j/200
+    }
+}
+plot(O$Date, O$Added_Column2)
+
+```
+
+
+
+
+
+
+
