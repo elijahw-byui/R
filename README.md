@@ -10,7 +10,7 @@ My purpose in writing this program was to have a way to compare the current stoc
 
 # Data Analysis Results
 
-{List the questions and the answers you found by doing this analysis.}
+I found the 50 and 200 day averages for any stock, on any day. 
 
 # Development Environment
 
