@@ -20,9 +20,9 @@ Written in the R language using ggplot2, zoo, rmarkdown and many others.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [stackoverflow](http://stackoverflow.com)
 * [Prelude in R](http://preludeinr.com)
+And many more...
 
 # Future Work
 
